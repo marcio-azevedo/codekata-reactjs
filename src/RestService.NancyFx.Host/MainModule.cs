@@ -3,6 +3,7 @@ using Nancy;
 
 namespace RestService.NancyFx.Host
 {
+    // https://github.com/NancyFx/Nancy/wiki/
     public class MainModule : NancyModule
     {
         public MainModule()
@@ -24,5 +25,7 @@ namespace RestService.NancyFx.Host
         }
 
         // https://github.com/NancyFx/Nancy/wiki/Model-binding#list-delimiters-in-html-forms
+
+        // TODO: https://github.com/NancyFx/Nancy/wiki/Forms-Authentication
     }
 }
