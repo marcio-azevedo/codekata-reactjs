@@ -86,9 +86,9 @@ gulp.task('clean', function () {
 
 // browserify -t [ babelify --presets [ react ] ] ./assets/jsx/app.jsx -o ./assets/js/bundle.js
 
-// Watch JS/JSX
+// Watch JS/JSX - "assets/jsx/**/*.{js,jsx}"
 gulp.task("watch", function () {
-    gulp.watch("assets/jsx/**/*.{js,jsx}", ["default"]);
+    gulp.watch("assets/jsx/*.jsx", ["default"]);
 });
 
 gulp.task("default", ["eslint", "babelify", "browserify"]);
