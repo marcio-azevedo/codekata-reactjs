@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>html5up</RootNamespace>
-    <AssemblyName>html5up</AssemblyName>
+    <RootNamespace>Prologue.ReactJS.Web</RootNamespace>
+    <AssemblyName>Prologue.ReactJS.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -64,6 +64,7 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\js\bundle.js" />
     <Content Include="assets\sass\ie8.scss" />
     <Content Include="assets\sass\ie9.scss" />
     <Content Include="assets\sass\main.scss" />
@@ -71,6 +72,10 @@
     <Content Include="assets\sass\libs\_mixins.scss" />
     <Content Include="assets\sass\libs\_skel.scss" />
     <Content Include="assets\sass\libs\_vars.scss" />
+    <Content Include="assets\jsx\app.jsx" />
+    <None Include="package.json" />
+    <None Include="bower.json" />
+    <None Include="PreBuild.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,6 +101,7 @@
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="assets\js\util.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\pic02.jpg" />
@@ -114,7 +120,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bower\" />
     <Folder Include="gulp\" />
   </ItemGroup>
   <PropertyGroup>
@@ -148,5 +153,9 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
-  -->
+
+  <Target Name="EnsureNmpPackageBuildAndGulpBuild" BeforeTargets="BeforeBuild">
+    <Exec Command="PreBuild.bat" WorkingDirectory="$(ProjectDir)" />
+ </Target>
+   -->
 </Project>
