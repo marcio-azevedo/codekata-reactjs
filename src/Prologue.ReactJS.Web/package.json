@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "Prologue.ReactJS.Web",
+  "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "browserify": "^12.0.1"
+
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-eslint": "^1.0.0",
+    "bower": "^1.7.1",
+    "gulp-bower": "^0.0.11",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-select": "^1.0.0-beta8",
+    "gulp-util": "^3.0.7",
+    "babelify": "^7.2.0",
+    "babel-preset-react": "^6.3.13",
+    "browserify": "^12.0.1",
+    "gulp-browserify": "^0.5.1",
+    "browserify-shim": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "reactify": "^1.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-concat": "^2.6.0",
+    "del": "^2.2.0"
+  }
+}
