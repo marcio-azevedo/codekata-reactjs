@@ -13,4 +13,4 @@ Web project template uses **[Prologue](http://html5up.net/prologue)** template.
 * Bower
 * Gulp
 
-React samples in [assets/jsx](/tree/master/src/Prologue.ReactJS.Web/assets/jsx/).
+React samples in [assets/jsx](/src/Prologue.ReactJS.Web/assets/jsx/).
