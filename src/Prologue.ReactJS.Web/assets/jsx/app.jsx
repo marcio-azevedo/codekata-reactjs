@@ -3,13 +3,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-
-// ###### DATA ######
-
-var data = [
-  { id: 1, author: "Pete Hunt", text: "This is one comment" },
-  { id: 2, author: "Jordan Walke", text: "This is *another* comment" }
-];
+// https://facebook.github.io/react/docs/getting-started.html
 
 /* ###### COMPONENTS ######
 
