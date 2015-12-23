@@ -1,28 +1,44 @@
-using System;
 using System.Collections.Generic;
 using Nancy;
+using Nancy.Conventions;
 
 namespace Prologue.ReactJS.Web
 {
     // https://github.com/NancyFx/Nancy/wiki/
+
+    public class ApplicationBootstrapper : DefaultNancyBootstrapper
+    {
+        protected override void ConfigureConventions(NancyConventions nancyConventions)
+        {
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddFile("index.html", "index.html"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("assets", @"assets"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("images", @"images"));
+            base.ConfigureConventions(nancyConventions);
+        }
+    }
+
     public class MainModule : NancyModule
     {
         public MainModule()
         {
-            Before += ctx =>
-            {
-                Console.Out.WriteLineAsync("Before Request.");
+            //Before += ctx =>
+            //{
+            //    //Console.Out.WriteLineAsync("Before Request.");
 
-                // A return value of null means that no action is taken by the interceptor and that the request should proceed to be processed by the matching route.
-                return null;
-            };
+            //    var path = ctx.Request.Path; // "/"
 
-            After += ctx =>
-            {
-                // Modify ctx.Response
-            };
+            //    // A return value of null means that no action is taken by the interceptor and that the request should proceed to be processed by the matching route.
+            //    return null;
+            //};
 
-            Get["/"] = parameters => View["index.html"];
+            //After += ctx =>
+            //{
+            //    // Modify ctx.Response
+            //};
+
+            Get["/"] = _ => View["index"];
+            Get["/home/"] = _ => View["index"];
+            Get["/index/"] = _ => View["index"];
 
             var comments = new List<Comment>()
             {
@@ -44,10 +60,7 @@ namespace Prologue.ReactJS.Web
 
         }
 
-        // https://github.com/NancyFx/Nancy/wiki/Model-binding#list-delimiters-in-html-forms
-
         // TODO: https://github.com/NancyFx/Nancy/wiki/Forms-Authentication
-
 
     }
 

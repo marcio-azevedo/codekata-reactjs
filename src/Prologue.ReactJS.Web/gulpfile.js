@@ -1,5 +1,4 @@
-﻿/// <binding BeforeBuild='default' />
-
+/// <binding />
 var gulp = require("gulp");
 var eslint = require("gulp-eslint");
 var babel = require("gulp-babel");
@@ -91,6 +90,6 @@ gulp.task("watch", function () {
     gulp.watch("assets/jsx/*.jsx", ["default"]);
 });
 
-gulp.task("default", ["eslint", "babelify", "browserify"]);
+gulp.task("default", ["eslint", "babelify", "browserify", "clean"]);
 
 
