@@ -6,11 +6,10 @@ Rest services are provided by a **[NancyFx](https://github.com/NancyFx/Nancy/wik
 
 Web project template uses **[Prologue](http://html5up.net/prologue)** template.
 
-
 ### Uses
 
 * NPM
 * Bower
 * Gulp
 
-React samples in [assets/jsx](/src/Prologue.ReactJS.Web/assets/jsx/).
+React samples in [client/src/views](/client/src/views/).
